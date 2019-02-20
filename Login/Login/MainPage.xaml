@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Login"
+             x:Class="Login.MainPage">
+
+    <StackLayout BackgroundColor="Black">
+        <!-- Place new controls here -->
+        <Label Text="LOGIN" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" 
+               FontSize="32"
+               TextColor="Red"/>
+        
+        <Label Text="Usuario" 
+               HorizontalOptions="Center"
+               FontSize="20"
+               TextColor="White"/>
+        
+        <Entry x:Name="txtUsuario" Placeholder="Usuario" 
+              FontSize="Large" 
+               BackgroundColor="White"
+               HorizontalOptions="Fill"/>
+        
+        <Label Text="Contrasenia" 
+               HorizontalOptions="Center"
+               FontSize="20"
+               TextColor="White"/>
+        
+        <Entry x:Name="txtContrasenia" Placeholder="Contrasenia" 
+               IsPassword="True"
+               FontSize="Large" 
+               BackgroundColor="White"/>
+
+        <Label x:Name="StatusMessage" 
+                        FontSize="Medium"
+                        TextColor="Blue"/>
+
+        <Label x:Name="ErrorMessage" 
+                        FontSize="Medium"
+                        TextColor="Blue"/>
+
+        <Button x:Name="btnIngresar" Text="Ingresar" 
+                BackgroundColor="Green"
+                Clicked="btnIngresar"/>
+        
+        <Button x:Name="btnCancelar" Text="Cancelar" 
+                BackgroundColor="Red"
+                Clicked="btnCancelar"/>
+        
+        </StackLayout>
+    
+</ContentPage>

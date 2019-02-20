@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.Principal">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <Label Text="USUARIOS" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand" 
+                         FontSize="32"
+                        TextColor="Yellow"/>
+
+            <Label Text="Usuario" 
+                         HorizontalOptions="Center"
+                         FontSize="20"
+                         TextColor="White"/>
+
+            <Entry x:Name="txtUsuario" Placeholder="Usuario" 
+                         FontSize="Large" 
+                         BackgroundColor="White"
+                         HorizontalOptions="Fill"/>
+
+            <Label Text="Contrasenia" 
+                         HorizontalOptions="Center"
+                         FontSize="20"
+                        TextColor="White"/>
+
+            <Entry x:Name="txtContrasenia" Placeholder="Contrasenia" 
+                         IsPassword="True"
+                         FontSize="Large" 
+                         BackgroundColor="White"/>
+
+            <Label Text="Email" 
+                         HorizontalOptions="Center"
+                         FontSize="20"
+                         TextColor="White"/>
+
+            <Entry x:Name="txtEmail" Placeholder="Email" 
+                         FontSize="Large" 
+                         BackgroundColor="White"/>
+
+            <Button x:Name="btnIngresar" Text="Ingresar Usuario" 
+                           BackgroundColor="Green"
+                           Clicked="BtnIngresar_Clicked"/>
+
+            <Button x:Name="btnTodoUsuarios" Text="Obtener Usuarios" 
+                           BackgroundColor="Yellow"
+                           Clicked="btnTodoUsuarios_Clicked"/>
+
+            <Label x:Name="StatusMessage" 
+                        FontSize="Medium"
+                        TextColor="Blue"/>
+
+            <Label x:Name="ErrorMessage" 
+                        FontSize="Medium"
+                        TextColor="Blue"/>
+
+            <ListView x:Name="ListaUsuarios">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid x:Name="item">
+                                
+                                <Label Text="{Binding NomUsuario}"
+                                              TextColor="White"/>
+                                <Label Grid.Column="1"
+                                              Text="{Binding Password}"
+                                               TextColor="White"/>
+                                <Label Grid.Column="2"
+                                             Text="{Binding Email}"
+                                              TextColor="White"/>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="btnEliminaUsuario" Text="Eliminar Usuario" 
+                           BackgroundColor="Red"
+                           Clicked="btnEliminaUsuario_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
